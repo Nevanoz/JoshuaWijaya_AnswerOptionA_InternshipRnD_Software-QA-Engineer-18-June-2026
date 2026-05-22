@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-05-23T00:19:16 WIB" name="Gmail Automation Test Suite" finished-at="2026-05-23T00:20:43 WIB" duration-ms="86901">
+    <groups>
+    </groups>
+    <test started-at="2026-05-23T00:19:16 WIB" name="Gmail Login and Email Tests" finished-at="2026-05-23T00:20:43 WIB" duration-ms="86901">
+      <class name="com.gmail.tests.GmailLoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.gmail.tests.GmailLoginTest@611889f4]" started-at="2026-05-23T00:19:16 WIB" name="setUp" finished-at="2026-05-23T00:19:19 WIB" duration-ms="2537" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testGmailLoginAndReadUnreadEmail()[pri:1, instance:com.gmail.tests.GmailLoginTest@611889f4]" started-at="2026-05-23T00:19:19 WIB" name="testGmailLoginAndReadUnreadEmail" description="Login to Gmail and retrieve last unread email" finished-at="2026-05-23T00:20:42 WIB" duration-ms="83703" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGmailLoginAndReadUnreadEmail -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.gmail.tests.GmailLoginTest@611889f4]" started-at="2026-05-23T00:20:42 WIB" name="tearDown" finished-at="2026-05-23T00:20:43 WIB" duration-ms="609" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.gmail.tests.GmailLoginTest -->
+    </test> <!-- Gmail Login and Email Tests -->
+  </suite> <!-- Gmail Automation Test Suite -->
+</testng-results>

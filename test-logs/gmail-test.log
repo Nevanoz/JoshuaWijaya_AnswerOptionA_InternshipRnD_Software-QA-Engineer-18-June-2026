@@ -1,0 +1,402 @@
+2026-05-23 00:06:39.346 [main] INFO  com.gmail.tests.BaseTest - Setting up test environment...
+2026-05-23 00:06:39.350 [main] INFO  com.gmail.tests.BaseTest - Configuration loaded successfully
+2026-05-23 00:06:41.402 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 148.0.7778.178 (resolved driver for Chrome 148)
+2026-05-23 00:06:41.586 [main] INFO  i.g.bonigarcia.wdm.online.Downloader - Downloading https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/148.0.7778.178/win64/chromedriver-win64.zip
+2026-05-23 00:06:44.249 [main] INFO  i.g.bonigarcia.wdm.online.Downloader - Extracting driver from compressed file chromedriver-win64.zip
+2026-05-23 00:06:44.612 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Joshua\.cache\selenium\chromedriver\win64\148.0.7778.178\chromedriver.exe
+2026-05-23 00:06:48.760 [main] INFO  com.gmail.tests.BaseTest - WebDriver initialized successfully
+2026-05-23 00:06:48.766 [main] INFO  com.gmail.tests.BaseTest - === Starting Gmail Login Test ===
+2026-05-23 00:06:48.766 [main] INFO  com.gmail.tests.BaseTest - Step 1: Navigating to Gmail...
+2026-05-23 00:06:53.655 [main] INFO  com.gmail.tests.BaseTest - Step 2: Entering email address...
+2026-05-23 00:06:54.029 [main] INFO  com.gmail.tests.BaseTest - Email entered: mikaelsebastianalvaro@gmail.com
+2026-05-23 00:06:57.654 [main] INFO  com.gmail.tests.BaseTest - Step 3: Entering password...
+2026-05-23 00:06:57.830 [main] INFO  com.gmail.tests.BaseTest - Password entered
+2026-05-23 00:07:03.028 [main] INFO  com.gmail.tests.BaseTest - Step 4: Checking for 2FA prompts...
+2026-05-23 00:07:13.104 [main] INFO  com.gmail.tests.BaseTest - No 2FA prompt detected, proceeding...
+2026-05-23 00:07:13.105 [main] INFO  com.gmail.tests.BaseTest - Step 5: Waiting for inbox to load...
+2026-05-23 00:07:33.723 [main] ERROR com.gmail.tests.BaseTest - Test failed with exception
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //div[@role='main'] (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at com.gmail.tests.GmailLoginTest.testGmailLoginAndReadUnreadEmail(GmailLoginTest.java:70)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@role='main']"}
+  (Session info: chrome=148.0.7778.179)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '26.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c182067c2f7ad3e5f15744e08945d19a, findElement {using=xpath, value=//div[@role='main']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\Joshua\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63573}, goog:processID: 13604, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63573/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c182067c2f7ad3e5f15744e08945d19a
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:168)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	... 31 common frames omitted
+2026-05-23 00:07:33.734 [main] INFO  com.gmail.tests.BaseTest - Closing browser...
+2026-05-23 00:07:34.008 [main] INFO  com.gmail.tests.BaseTest - Test execution completed
+2026-05-23 00:12:09.605 [main] INFO  com.gmail.tests.BaseTest - Setting up test environment...
+2026-05-23 00:12:09.609 [main] INFO  com.gmail.tests.BaseTest - Configuration loaded successfully
+2026-05-23 00:12:10.272 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 148.0.7778.178 (resolved driver for Chrome 148)
+2026-05-23 00:12:10.306 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Joshua\.cache\selenium\chromedriver\win64\148.0.7778.178\chromedriver.exe
+2026-05-23 00:12:12.996 [main] INFO  com.gmail.tests.BaseTest - WebDriver initialized successfully
+2026-05-23 00:12:13.002 [main] INFO  com.gmail.tests.BaseTest - === Starting Gmail Login Test ===
+2026-05-23 00:12:13.002 [main] INFO  com.gmail.tests.BaseTest - Step 1: Navigating to Gmail...
+2026-05-23 00:12:17.398 [main] INFO  com.gmail.tests.BaseTest - Step 2: Entering email address...
+2026-05-23 00:12:17.703 [main] INFO  com.gmail.tests.BaseTest - Email entered: mikaelsebastianalvaro@gmail.com
+2026-05-23 00:12:21.092 [main] INFO  com.gmail.tests.BaseTest - Step 3: Entering password...
+2026-05-23 00:12:22.625 [main] ERROR com.gmail.tests.BaseTest - Test failed with exception
+org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=148.0.7778.179)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '26.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7dc756cb9da77507a76b781c1f1d8ff3, clearElement {id=f.17559D80575A583F5B4E7906221EA7B7.d.BB9D5FA4BBBA4BDF0BF495DE73EB7130.e.14}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\Joshua\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51095}, goog:processID: 26128, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51095/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (7dc756cb9da77507a76b781c1f1d8ff3)] -> xpath: //input[@name='Passwd' or @type='password']]
+Session ID: 7dc756cb9da77507a76b781c1f1d8ff3
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:130)
+	at com.gmail.tests.GmailLoginTest.testGmailLoginAndReadUnreadEmail(GmailLoginTest.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+2026-05-23 00:12:22.640 [main] INFO  com.gmail.tests.BaseTest - Closing browser...
+2026-05-23 00:12:22.965 [main] INFO  com.gmail.tests.BaseTest - Test execution completed
+2026-05-23 00:12:42.753 [main] INFO  com.gmail.tests.BaseTest - Setting up test environment...
+2026-05-23 00:12:42.757 [main] INFO  com.gmail.tests.BaseTest - Configuration loaded successfully
+2026-05-23 00:12:43.413 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 148.0.7778.178 (resolved driver for Chrome 148)
+2026-05-23 00:12:43.445 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Joshua\.cache\selenium\chromedriver\win64\148.0.7778.178\chromedriver.exe
+2026-05-23 00:12:45.508 [main] INFO  com.gmail.tests.BaseTest - WebDriver initialized successfully
+2026-05-23 00:12:45.513 [main] INFO  com.gmail.tests.BaseTest - === Starting Gmail Login Test ===
+2026-05-23 00:12:45.514 [main] INFO  com.gmail.tests.BaseTest - Step 1: Navigating to Gmail...
+2026-05-23 00:12:51.068 [main] INFO  com.gmail.tests.BaseTest - Step 2: Entering email address...
+2026-05-23 00:12:51.383 [main] INFO  com.gmail.tests.BaseTest - Email entered: mikaelsebastianalvaro@gmail.com
+2026-05-23 00:12:54.848 [main] INFO  com.gmail.tests.BaseTest - Step 3: Entering password...
+2026-05-23 00:12:55.004 [main] INFO  com.gmail.tests.BaseTest - Password entered
+2026-05-23 00:13:00.171 [main] INFO  com.gmail.tests.BaseTest - Step 4: Checking for 2FA prompts...
+2026-05-23 00:13:10.213 [main] INFO  com.gmail.tests.BaseTest - No 2FA prompt detected, proceeding...
+2026-05-23 00:13:10.214 [main] INFO  com.gmail.tests.BaseTest - Step 5: Waiting for inbox to load...
+2026-05-23 00:14:31.560 [main] INFO  com.gmail.tests.BaseTest - Setting up test environment...
+2026-05-23 00:14:31.563 [main] INFO  com.gmail.tests.BaseTest - Configuration loaded successfully
+2026-05-23 00:14:32.030 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 148.0.7778.178 (resolved driver for Chrome 148)
+2026-05-23 00:14:32.052 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Joshua\.cache\selenium\chromedriver\win64\148.0.7778.178\chromedriver.exe
+2026-05-23 00:14:34.415 [main] INFO  com.gmail.tests.BaseTest - WebDriver initialized successfully
+2026-05-23 00:14:34.421 [main] INFO  com.gmail.tests.BaseTest - === Starting Gmail Login Test ===
+2026-05-23 00:14:34.422 [main] INFO  com.gmail.tests.BaseTest - Step 1: Navigating to Gmail...
+2026-05-23 00:14:38.741 [main] INFO  com.gmail.tests.BaseTest - Step 2: Entering email address...
+2026-05-23 00:14:39.196 [main] INFO  com.gmail.tests.BaseTest - Email entered: mikaelsebastianalvaro@gmail.com
+2026-05-23 00:14:42.690 [main] INFO  com.gmail.tests.BaseTest - Step 3: Entering password...
+2026-05-23 00:14:42.835 [main] INFO  com.gmail.tests.BaseTest - Password entered
+2026-05-23 00:14:47.993 [main] INFO  com.gmail.tests.BaseTest - Step 4: Checking for 2FA prompts...
+2026-05-23 00:14:58.064 [main] INFO  com.gmail.tests.BaseTest - No 2FA prompt detected, proceeding...
+2026-05-23 00:14:58.065 [main] INFO  com.gmail.tests.BaseTest - Step 5: Waiting for inbox to load...
+2026-05-23 00:15:18.637 [main] ERROR com.gmail.tests.BaseTest - Test failed with exception
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //div[@role='main'] (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at com.gmail.tests.GmailLoginTest.testGmailLoginAndReadUnreadEmail(GmailLoginTest.java:70)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@role='main']"}
+  (Session info: chrome=148.0.7778.179)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '26.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [184929be4b615b2483979a209b97160a, findElement {using=xpath, value=//div[@role='main']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\Joshua\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50960}, goog:processID: 19184, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50960/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 184929be4b615b2483979a209b97160a
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:168)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	... 31 common frames omitted
+2026-05-23 00:15:18.653 [main] INFO  com.gmail.tests.BaseTest - Closing browser...
+2026-05-23 00:15:18.976 [main] INFO  com.gmail.tests.BaseTest - Test execution completed
+2026-05-23 00:18:01.994 [main] INFO  com.gmail.tests.BaseTest - Setting up test environment...
+2026-05-23 00:18:01.997 [main] INFO  com.gmail.tests.BaseTest - Configuration loaded successfully
+2026-05-23 00:18:02.468 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 148.0.7778.178 (resolved driver for Chrome 148)
+2026-05-23 00:18:02.500 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Joshua\.cache\selenium\chromedriver\win64\148.0.7778.178\chromedriver.exe
+2026-05-23 00:18:04.310 [main] INFO  com.gmail.tests.BaseTest - WebDriver initialized successfully
+2026-05-23 00:18:04.314 [main] INFO  com.gmail.tests.BaseTest - === Starting Gmail Login Test ===
+2026-05-23 00:18:04.314 [main] INFO  com.gmail.tests.BaseTest - Step 1: Navigating to Gmail...
+2026-05-23 00:18:09.039 [main] INFO  com.gmail.tests.BaseTest - Step 2: Entering email address...
+2026-05-23 00:18:09.337 [main] INFO  com.gmail.tests.BaseTest - Email entered: mikaelsebastianalvaro@gmail.com
+2026-05-23 00:18:12.656 [main] INFO  com.gmail.tests.BaseTest - Step 3: Entering password...
+2026-05-23 00:18:12.779 [main] INFO  com.gmail.tests.BaseTest - Password entered
+2026-05-23 00:18:17.938 [main] INFO  com.gmail.tests.BaseTest - Step 4: Checking for 2FA prompts...
+2026-05-23 00:18:27.990 [main] INFO  com.gmail.tests.BaseTest - No 2FA prompt detected, proceeding...
+2026-05-23 00:18:27.990 [main] INFO  com.gmail.tests.BaseTest - Step 5: Waiting for inbox to load...
+2026-05-23 00:18:37.993 [main] ERROR com.gmail.tests.BaseTest - Test failed with exception
+org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: unable to send message to renderer
+  (Session info: chrome=148.0.7778.179)
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '26.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [27a596942a2a30f9fe595fb47c5f3214, findElement {using=xpath, value=//div[@role='main']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\Joshua\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64723}, goog:processID: 27628, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64723/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 27a596942a2a30f9fe595fb47c5f3214
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:171)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:168)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:204)
+	at com.gmail.tests.GmailLoginTest.testGmailLoginAndReadUnreadEmail(GmailLoginTest.java:70)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+2026-05-23 00:18:38.044 [main] INFO  com.gmail.tests.BaseTest - Closing browser...
+2026-05-23 00:18:38.227 [main] INFO  com.gmail.tests.BaseTest - Test execution completed
+2026-05-23 00:18:50.489 [main] INFO  com.gmail.tests.BaseTest - Setting up test environment...
+2026-05-23 00:18:50.494 [main] INFO  com.gmail.tests.BaseTest - Configuration loaded successfully
+2026-05-23 00:18:51.232 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 148.0.7778.178 (resolved driver for Chrome 148)
+2026-05-23 00:18:51.285 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Joshua\.cache\selenium\chromedriver\win64\148.0.7778.178\chromedriver.exe
+2026-05-23 00:18:53.292 [main] INFO  com.gmail.tests.BaseTest - WebDriver initialized successfully
+2026-05-23 00:18:53.296 [main] INFO  com.gmail.tests.BaseTest - === Starting Gmail Login Test ===
+2026-05-23 00:18:53.297 [main] INFO  com.gmail.tests.BaseTest - Step 1: Navigating to Gmail...
+2026-05-23 00:18:57.922 [main] INFO  com.gmail.tests.BaseTest - Step 2: Entering email address...
+2026-05-23 00:18:58.226 [main] INFO  com.gmail.tests.BaseTest - Email entered: mikaelsebastianalvaro@gmail.com
+2026-05-23 00:19:01.540 [main] INFO  com.gmail.tests.BaseTest - Step 3: Entering password...
+2026-05-23 00:19:02.383 [main] ERROR com.gmail.tests.BaseTest - Test failed with exception
+org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=148.0.7778.179)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '26.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2749f66dc88eab379ad839caf7cc3bf6, clearElement {id=f.FD48F6B075EB5E7B2C2923BFE5EDACBA.d.C230C5065C3AA702EE32DB6F3323E9C3.e.19}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\Joshua\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53719}, goog:processID: 3472, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53719/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (2749f66dc88eab379ad839caf7cc3bf6)] -> xpath: //input[@name='Passwd' or @type='password']]
+Session ID: 2749f66dc88eab379ad839caf7cc3bf6
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:130)
+	at com.gmail.tests.GmailLoginTest.testGmailLoginAndReadUnreadEmail(GmailLoginTest.java:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+2026-05-23 00:19:02.401 [main] INFO  com.gmail.tests.BaseTest - Closing browser...
+2026-05-23 00:19:02.704 [main] INFO  com.gmail.tests.BaseTest - Test execution completed
+2026-05-23 00:19:16.495 [main] INFO  com.gmail.tests.BaseTest - Setting up test environment...
+2026-05-23 00:19:16.499 [main] INFO  com.gmail.tests.BaseTest - Configuration loaded successfully
+2026-05-23 00:19:17.065 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 148.0.7778.178 (resolved driver for Chrome 148)
+2026-05-23 00:19:17.097 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Joshua\.cache\selenium\chromedriver\win64\148.0.7778.178\chromedriver.exe
+2026-05-23 00:19:19.019 [main] INFO  com.gmail.tests.BaseTest - WebDriver initialized successfully
+2026-05-23 00:19:19.023 [main] INFO  com.gmail.tests.BaseTest - === Starting Gmail Login Test ===
+2026-05-23 00:19:19.024 [main] INFO  com.gmail.tests.BaseTest - Step 1: Navigating to Gmail...
+2026-05-23 00:19:23.123 [main] INFO  com.gmail.tests.BaseTest - Step 2: Entering email address...
+2026-05-23 00:19:23.541 [main] INFO  com.gmail.tests.BaseTest - Email entered: mikaelsebastianalvaro@gmail.com
+2026-05-23 00:19:26.948 [main] INFO  com.gmail.tests.BaseTest - Step 3: Entering password...
+2026-05-23 00:19:27.092 [main] INFO  com.gmail.tests.BaseTest - Password entered
+2026-05-23 00:19:32.239 [main] INFO  com.gmail.tests.BaseTest - Step 4: Checking for 2FA prompts...
+2026-05-23 00:19:34.590 [main] WARN  com.gmail.tests.BaseTest - 2FA verification detected!
+2026-05-23 00:20:39.610 [main] INFO  com.gmail.tests.BaseTest - Proceeding after 2FA wait period
+2026-05-23 00:20:39.610 [main] INFO  com.gmail.tests.BaseTest - Step 5: Waiting for inbox to load...
+2026-05-23 00:20:42.654 [main] INFO  com.gmail.tests.BaseTest - ✓ Successfully logged into Gmail
+2026-05-23 00:20:42.654 [main] INFO  com.gmail.tests.BaseTest - Step 6: Retrieving last unread email...
+2026-05-23 00:20:42.723 [main] INFO  com.gmail.tests.BaseTest - Found 3 unread email(s)
+2026-05-23 00:20:42.723 [main] INFO  com.gmail.tests.BaseTest - ===========================================
+2026-05-23 00:20:42.723 [main] INFO  com.gmail.tests.BaseTest - LAST UNREAD EMAIL TITLE: 2-Step Verification turned on
+2026-05-23 00:20:42.723 [main] INFO  com.gmail.tests.BaseTest - ===========================================
+2026-05-23 00:20:42.723 [main] INFO  com.gmail.tests.BaseTest - === Test Completed Successfully ===
+2026-05-23 00:20:42.728 [main] INFO  com.gmail.tests.BaseTest - Closing browser...
+2026-05-23 00:20:43.335 [main] INFO  com.gmail.tests.BaseTest - Test execution completed
